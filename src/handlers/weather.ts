@@ -12,7 +12,7 @@ export const getWeather = async (event: APIGatewayProxyEvent) => {
     const postCode = queryStringParams.zip;
     const countryCode = queryStringParams.countryCode;
 
-    if (!postCode || !Number.isFinite(postCode)) {
+    if (!postCode || typeof parseInt(postCode) !== 'number') {
       throw new HttpException(ResponseErrorMessages.PARAMS_MISSING, 400);
     }
     const weatherMapAPIData = await weatherController.getWeatherByPostCode(

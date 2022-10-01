@@ -1,4 +1,4 @@
-import { WeatherMapAPIResponse, WeatherResponse } from '../@types';
+import { WeatherMapAPIResponse } from '../@types';
 import { HttpClient } from '../utils';
 import { DEFAULT_COUNTRY_CODE } from './constants';
 
@@ -36,7 +36,7 @@ export class WeatherController {
           appid: process.env.OPEN_WEATHERMAP_API_KEY,
         },
       );
-    
+     
       return weatherMapAPIHTTPResponse.data;
     } catch (error) {
       return Promise.reject(error);

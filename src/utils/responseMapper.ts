@@ -1,5 +1,12 @@
 import { WeatherMapAPIResponse, WeatherResponse } from '../@types';
 
+/**
+ * Mapper function to convert weather API data to custom weather response
+ *
+ * @export
+ * @param {WeatherMapAPIResponse} apiResponse
+ * @returns {WeatherResponse}
+ */
 export function responseMapper(
   apiResponse: WeatherMapAPIResponse,
 ): WeatherResponse {

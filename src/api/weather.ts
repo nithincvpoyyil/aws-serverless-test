@@ -17,7 +17,7 @@ export class WeatherController {
   ) {}
 
   /**
-   *
+   * Returns weather data information from weather map APIs
    *
    * @param {string} postCode
    * @param {*} [countryCode=DEFAULT_COUNTRY_CODE]
